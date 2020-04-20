@@ -1,6 +1,7 @@
 var assert = require('assert');
-var joinDeep = require('..');
 var flattenDeep = require('lodash.flattendeep');
+
+var joinDeep = require('../..');
 
 describe('join methods', function () {
   it('should treat sparse arrays as dense', function () {
@@ -8,14 +9,14 @@ describe('join methods', function () {
     var expected = [1, 2, 3];
     expected.push(undefined, undefined, undefined);
 
-    assert.deepStrictEqual(joinDeep(array, ', '), expected.join(', '));
+    assert.deepEqual(joinDeep(array, ', '), expected.join(', '));
   });
 
   // it('should work with extremely large arrays', function () {
   //   var array = [Array(5e5)];
 
   //   try {
-  //     assert.deepStrictEqual(joinDeep(array), flattenDeep(array).join(', '));
+  //     assert.deepEqual(joinDeep(array), flattenDeep(array).join(', '));
   //   } catch (e) {
   //     assert.ok(false, e.message);
   //   }
@@ -24,18 +25,18 @@ describe('join methods', function () {
   it('should work with empty arrays', function () {
     var array = [[], [[]], [[], [[[]]]]];
 
-    assert.deepStrictEqual(joinDeep(array, ', '), flattenDeep(array).join(', '));
+    assert.deepEqual(joinDeep(array, ', '), flattenDeep(array).join(', '));
   });
 
   it('should support flattening of nested arrays', function () {
     var array = [1, [2, [3, [4]], 5]];
 
-    assert.deepStrictEqual(joinDeep(array, ', '), flattenDeep(array).join(', '));
+    assert.deepEqual(joinDeep(array, ', '), flattenDeep(array).join(', '));
   });
 
   it('should return an empty array for non array-like objects', function () {
     var nonArray = { '0': 'a' };
 
-    assert.deepStrictEqual(joinDeep(nonArray, ', '), flattenDeep(nonArray).join(', '));
+    assert.deepEqual(joinDeep(nonArray, ', '), flattenDeep(nonArray).join(', '));
   });
 });
