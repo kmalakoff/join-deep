@@ -34,7 +34,7 @@ describe('join methods', function () {
   });
 
   it('should return an empty array for non array-like objects', function () {
-    var nonArray = { '0': 'a' };
+    var nonArray = { 0: 'a' };
 
     assert.deepEqual(joinDeep(nonArray, ', '), '');
   });
