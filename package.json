@@ -30,7 +30,7 @@
     "version": "tsds version"
   },
   "dependencies": {
-    "reduce-deep": "^1.3.3"
+    "reduce-deep": "^1.3.4"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
