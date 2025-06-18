@@ -1,8 +1,7 @@
 import assert from 'assert';
-import flattenDeep from 'lodash.flattendeep';
-
 // @ts-ignore
 import joinDeep from 'join-deep';
+import flattenDeep from 'lodash.flattendeep';
 
 describe('join methods', () => {
   it('should treat sparse arrays as dense', () => {
