@@ -36,7 +36,7 @@
     "version": "tsds version"
   },
   "dependencies": {
-    "reduce-deep": "^1.3.21"
+    "reduce-deep": "^1.4.0"
   },
   "devDependencies": {
     "@types/mocha": "*",
