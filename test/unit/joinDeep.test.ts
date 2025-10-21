@@ -1,6 +1,5 @@
 import assert from 'assert';
 
-// @ts-ignore
 import joinDeep from 'join-deep';
 
 describe('join methods', () => {
