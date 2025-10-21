@@ -1,5 +1,4 @@
 import assert from 'assert';
-// @ts-ignore
 import joinDeep from 'join-deep';
 import flattenDeep from 'lodash.flattendeep';
 
