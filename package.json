@@ -38,15 +38,15 @@
     "version": "tsds version"
   },
   "dependencies": {
-    "reduce-deep": "*"
+    "reduce-deep": "^1.4.8"
   },
   "devDependencies": {
-    "@types/mocha": "*",
-    "@types/node": "*",
-    "lodash.flattendeep": "*",
-    "node-version-use": "*",
-    "ts-dev-stack": "*",
-    "tsds-config": "*"
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^25.0.1",
+    "lodash.flattendeep": "^4.4.0",
+    "node-version-use": "^2.1.5",
+    "ts-dev-stack": "^1.21.3",
+    "tsds-config": "^0.2.1"
   },
   "engines": {
     "node": ">=0.8"

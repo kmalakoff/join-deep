@@ -12,7 +12,7 @@ describe('join methods', () => {
   });
 
   // it('should work with extremely large arrays', function () {
-  //   var array = [Array(5e5)];
+  //   let array = [Array(5e5)];
 
   //   try {
   //     assert.deepEqual(joinDeep(array), flattenDeep(array).join(', '));
