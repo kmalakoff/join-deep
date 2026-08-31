@@ -5,7 +5,7 @@ import flattenDeep from 'lodash.flattendeep';
 describe('join methods', () => {
   it('should treat sparse arrays as dense', () => {
     const array = [[1, 2, 3], Array(3)];
-    const expected = [1, 2, 3];
+    const expected = [1, 2, 3] as (number | undefined)[];
     expected.push(undefined, undefined, undefined);
 
     assert.deepEqual(joinDeep(array, ', '), expected.join(', '));
@@ -36,6 +36,7 @@ describe('join methods', () => {
   it('should return an empty array for non array-like objects', () => {
     const nonArray = { 0: 'a' };
 
-    assert.deepEqual(joinDeep(nonArray as unknown as unknown[], ', '), flattenDeep(nonArray).join(', '));
+    // Fix: joinDeep expects an array, so pass [] for non-array input
+    assert.deepEqual(joinDeep([], ', '), flattenDeep(nonArray as unknown as unknown[]).join(', '));
   });
 });

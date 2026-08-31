@@ -1,1 +1,1 @@
-ignores: ["node-version-use", "ts-dev-stack", "join-deep"]
+ignores: ["join-deep", "node-version-use", "ts-dev-stack"]
