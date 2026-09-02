@@ -1,6 +1,6 @@
 {
   "name": "join-deep",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Deep join an array",
   "main": "index.js",
   "engines": {
