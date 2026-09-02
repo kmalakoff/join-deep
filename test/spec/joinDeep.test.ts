@@ -1,6 +1,7 @@
-const assert = require('assert');
+import assert from 'assert';
 
-const joinDeep = require('join-deep');
+// @ts-ignore
+import joinDeep from 'join-deep';
 
 describe('join methods', () => {
   it('should treat sparse arrays as dense', () => {
