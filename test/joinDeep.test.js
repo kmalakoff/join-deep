@@ -2,13 +2,11 @@ var assert = require('assert');
 var joinDeep = require('..');
 
 describe('join methods', function () {
-  var array = [1, [2, [3, [4]], 5]];
-
   it('should treat sparse arrays as dense', function () {
     var array = [[1, 2, 3], Array(3)];
     var expected = [1, 2, 3];
-
     expected.push(undefined, undefined, undefined);
+
     assert.deepStrictEqual(joinDeep(array, ', '), expected.join(', '));
   });
 
@@ -29,13 +27,14 @@ describe('join methods', function () {
   });
 
   it('should support flattening of nested arrays', function () {
+    var array = [1, [2, [3, [4]], 5]];
+
     assert.deepStrictEqual(joinDeep(array, ', '), '1, 2, 3, 4, 5');
   });
 
   it('should return an empty array for non array-like objects', function () {
-    var expected = '';
     var nonArray = { '0': 'a' };
 
-    assert.deepStrictEqual(joinDeep(nonArray, ', '), expected);
+    assert.deepStrictEqual(joinDeep(nonArray, ', '), '');
   });
 });
