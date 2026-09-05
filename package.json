@@ -43,7 +43,7 @@
   "devDependencies": {
     "@types/mocha": "*",
     "@types/node": "*",
-    "lodash.flattendeep": ">=3.0.0",
+    "lodash.flattendeep": "^4.0.0",
     "node-version-use": "*",
     "ts-dev-stack": "*",
     "tsds-config": "*"

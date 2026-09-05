@@ -5,7 +5,7 @@ import joinDeep from 'join-deep';
 describe('join methods', () => {
   it('should treat sparse arrays as dense', () => {
     const array = [[1, 2, 3], Array(3)];
-    const expected = [1, 2, 3];
+    const expected = [1, 2, 3] as (number | undefined)[];
     expected.push(undefined, undefined, undefined);
 
     const _r = expected.join(', ');
@@ -18,7 +18,7 @@ describe('join methods', () => {
     try {
       assert.deepEqual(joinDeep<string>([expected], ', '), expected);
     } catch (e) {
-      assert.ok(false, e.message);
+      assert.ok(false, (e as Error).message);
     }
   });
 
