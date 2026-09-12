@@ -1,6 +1,10 @@
-## join-deep
+# join-deep
 
 Deep join an array.
+
+```bash
+npm install join-deep
+```js
 
 ```
 var joinDeep = require('join-deep');
